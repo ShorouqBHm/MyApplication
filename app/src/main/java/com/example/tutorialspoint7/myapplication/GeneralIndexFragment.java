@@ -37,7 +37,7 @@ public class GeneralIndexFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.generalindex, container, false);
-        textView=view.findViewById(R.id.textView9);
+//        textView=view.findViewById(R.id.textView9);
         return view;
     }
 
