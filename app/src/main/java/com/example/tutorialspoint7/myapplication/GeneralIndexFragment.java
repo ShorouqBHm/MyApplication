@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -24,27 +25,29 @@ import java.util.List;
 
 public class GeneralIndexFragment extends Fragment {
 
-
-    private TextView textView;
     private List<GeneralIndex> generalIndexList=new ArrayList<>();
-
+     TextView tradeTxt,amountTxt,volumeTxt,winning_txt,fixedTxt,losingTxt;
     @Override
     public void onStart() {
         super.onStart();
         jsonParse();
+
     }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.generalindex, container, false);
-//        textView=view.findViewById(R.id.textView9);
-        return view;
+        tradeTxt=view.findViewById(R.id.trade);amountTxt=view.findViewById(R.id.amount);volumeTxt=view.findViewById(R.id.volume);
+        winning_txt=view.findViewById(R.id.winning);fixedTxt=view.findViewById(R.id.fixed);losingTxt=view.findViewById(R.id.losing);
+
+
+               return view;
     }
 
 
     public void jsonParse() {
 
-        String url="http://tickerchart.com/interview/general-index.json";
+        String url="https://tickerchart.com/interview/general-index.json";
 
 
         JsonObjectRequest request=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>()  {
@@ -57,15 +60,15 @@ public class GeneralIndexFragment extends Fragment {
                         GeneralIndex generalIndex = new GeneralIndex();
                         Company company=new Company();
                         String name=response.getString("name");
-                        double trades= response.getDouble("trades");
-                        double volume=response.getDouble("volume");
-                        double amount=response.getDouble("amount");
+                        String trades= response.getString("trades");
+                        String volume=response.getString("volume");
+                        String amount=response.getString("amount");
 
                         JSONObject companiesObject=response.getJSONObject("companies");
 
-                        double winning=companiesObject.getDouble("winning");
-                        double fixed=companiesObject.getDouble("fixed");
-                        double losing=companiesObject.getDouble("losing");
+                        String winning=companiesObject.getString("winning");
+                        String fixed=companiesObject.getString("fixed");
+                        String losing=companiesObject.getString("losing");
 
 
                     company.setWinning(winning);company.setFixed(fixed);company.setLosing(losing);
@@ -73,17 +76,19 @@ public class GeneralIndexFragment extends Fragment {
                     generalIndex.setCompany(company);
 
                     generalIndexList.add(generalIndex);
-
-
+                    tradeTxt.setText(trades);amountTxt.setText(amount);volumeTxt.setText((volume));winning_txt.setText(winning);fixedTxt.setText(fixed);losingTxt.setText(losing);
 
                 } catch (JSONException e) {
                     System.err.println(e.getMessage());
+
                 }
             }
+
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 System.err.println(error.getMessage());
+
             }
         });
 

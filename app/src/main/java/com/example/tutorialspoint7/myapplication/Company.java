@@ -2,31 +2,31 @@ package com.example.tutorialspoint7.myapplication;
 
 public class Company {
 
-    private double winning;
-    private  double fixed;
-    private  double losing;
+    private String winning;
+    private  String fixed;
+    private  String losing;
 
-    public double getWinning() {
+    public String getWinning() {
         return winning;
     }
 
-    public void setWinning(double winning) {
+    public void setWinning(String winning) {
         this.winning = winning;
     }
 
-    public double getFixed() {
+    public String getFixed() {
         return fixed;
     }
 
-    public void setFixed(double fixed) {
+    public void setFixed(String fixed) {
         this.fixed = fixed;
     }
 
-    public double getLosing() {
+    public String getLosing() {
         return losing;
     }
 
-    public void setLosing(double losing) {
+    public void setLosing(String losing) {
         this.losing = losing;
     }
 }

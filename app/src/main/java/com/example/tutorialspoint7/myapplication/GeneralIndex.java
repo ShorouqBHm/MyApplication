@@ -3,9 +3,9 @@ package com.example.tutorialspoint7.myapplication;
 public class GeneralIndex {
 
     private String name;
-    private  double trades;
-    private double volume;
-    private  double amount;
+    private  String trades;
+    private String volume;
+    private  String amount;
     private Company company;
 
     public String getName() {
@@ -16,27 +16,27 @@ public class GeneralIndex {
         this.name = name;
     }
 
-    public double getTrades() {
+    public String getTrades() {
         return trades;
     }
 
-    public void setTrades(double trades) {
+    public void setTrades(String trades) {
         this.trades = trades;
     }
 
-    public double getVolume() {
+    public String getVolume() {
         return volume;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(String volume) {
         this.volume = volume;
     }
 
-    public double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 

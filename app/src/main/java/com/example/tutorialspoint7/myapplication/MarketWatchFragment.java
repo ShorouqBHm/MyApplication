@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,6 +32,7 @@ public class MarketWatchFragment extends Fragment {
     private List<Trade>tradeList=new ArrayList<>();
     private RecyclerView recyclerView;
     private ListAdapter listAdapter;
+
 
 
     @Override

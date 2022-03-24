@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="name">Name</string>
+    <string name="trade">Trade :</string>
+    <string name="amount">Amount :</string>
+    <string name="volume">Volume :</string>
+    <string name="companies">Companies</string>
+    <string name="winning">winning</string>
+    <string name="fixed">fixed</string>
+    <string name="losing">losing</string>
 </resources>
