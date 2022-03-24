@@ -12,8 +12,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        getSupportFragmentManager().beginTransaction().add(R.id.Act1, new MarketWatchFragment()).addToBackStack("asd").commit();
+
         getSupportFragmentManager().beginTransaction().add(R.id.Act1, new GeneralIndexFragment()).addToBackStack("asd").commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.Act1, new MarketWatchFragment()).addToBackStack("asd").commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.Act1, new TradeDetailsFragment()).addToBackStack("asd").commit();
 
 
 //                Toast.makeText(getApplication(),"Shorouq",Toast.LENGTH_SHORT).show();

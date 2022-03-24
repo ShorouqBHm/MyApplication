@@ -7,33 +7,37 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="388dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/black">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="10dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="12dp">
             <TextView
                 android:id="@+id/txtview1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
                 android:text="@string/trade"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/trade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
+                android:layout_marginStart="55dp"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/txtview3"
@@ -42,7 +46,8 @@
                 android:layout_marginStart="180dp"
                 android:text="@string/amount"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/amount"
@@ -50,26 +55,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="250dp"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/txtview5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/volume"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/volume"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="82dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="32dp"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
 
             <TextView
@@ -77,10 +84,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginTop="85dp"
+                android:layout_marginTop="100dp"
                 android:text="@string/companies"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/txtview8"
@@ -90,7 +98,8 @@
                 android:layout_marginTop="75dp"
                 android:text="@string/winning"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/txtview9"
@@ -100,7 +109,8 @@
                 android:layout_marginTop="75dp"
                 android:text="@string/fixed"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/txtview10"
@@ -110,7 +120,8 @@
                 android:layout_marginTop="75dp"
                 android:text="@string/losing"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/winning"
@@ -119,7 +130,8 @@
                 android:layout_marginStart="195dp"
                 android:layout_marginTop="100dp"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/green"/>
 
             <TextView
                 android:id="@+id/fixed"
@@ -128,7 +140,8 @@
                 android:layout_marginStart="245dp"
                 android:layout_marginTop="100dp"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/losing"
@@ -137,7 +150,8 @@
                 android:layout_marginStart="290dp"
                 android:layout_marginTop="100dp"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="@color/Red"/>
 
         </RelativeLayout>
 

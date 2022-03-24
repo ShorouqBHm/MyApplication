@@ -8,4 +8,12 @@
     <string name="winning">winning</string>
     <string name="fixed">fixed</string>
     <string name="losing">losing</string>
+    <string name="symbol">Symbol:</string>
+    <string name="tradescount">TradesCount:</string>
+    <string name="high">High:</string>
+    <string name="low">Low:</string>
+    <string name="Volume">Volume:</string>
+    <string name="Amount">Amount:</string>
+
+
 </resources>
