@@ -26,7 +26,7 @@ import java.util.List;
 public class GeneralIndexFragment extends Fragment {
 
     private List<GeneralIndex> generalIndexList=new ArrayList<>();
-     TextView tradeTxt,amountTxt,volumeTxt,winning_txt,fixedTxt,losingTxt;
+     TextView tradeTitleTxt,tradeTxt,amountTxt,volumeTxt,winning_txt,fixedTxt,losingTxt;
     @Override
     public void onStart() {
         super.onStart();
@@ -39,7 +39,7 @@ public class GeneralIndexFragment extends Fragment {
         View view = inflater.inflate(R.layout.generalindex, container, false);
         tradeTxt=view.findViewById(R.id.trade);amountTxt=view.findViewById(R.id.amount);volumeTxt=view.findViewById(R.id.volume);
         winning_txt=view.findViewById(R.id.winning);fixedTxt=view.findViewById(R.id.fixed);losingTxt=view.findViewById(R.id.losing);
-
+       tradeTitleTxt=view.findViewById(R.id.title);
 
                return view;
     }
@@ -76,7 +76,7 @@ public class GeneralIndexFragment extends Fragment {
                     generalIndex.setCompany(company);
 
                     generalIndexList.add(generalIndex);
-                    tradeTxt.setText(trades);amountTxt.setText(amount);volumeTxt.setText((volume));winning_txt.setText(winning);fixedTxt.setText(fixed);losingTxt.setText(losing);
+                    tradeTitleTxt.setText(name);tradeTxt.setText(trades);amountTxt.setText(amount);volumeTxt.setText((volume));winning_txt.setText(winning);fixedTxt.setText(fixed);losingTxt.setText(losing);
 
                 } catch (JSONException e) {
                     System.err.println(e.getMessage());

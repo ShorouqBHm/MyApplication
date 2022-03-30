@@ -20,7 +20,7 @@ import org.json.JSONObject;
 
 public class TradeDetailsFragment extends Fragment {
 
-    TextView symbolTxt,tradesCountTxt,highTxt,lowTxt,volumeTxt,amountTxt;
+    TextView tradeDetailsTitleTxt,symbolTxt,tradesCountTxt,highTxt,lowTxt,volumeTxt,amountTxt;
     @Override
     public void onStart() {
         super.onStart();
@@ -33,7 +33,7 @@ public class TradeDetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.tradedetails, container, false);
         symbolTxt=view.findViewById(R.id.symbol);tradesCountTxt=view.findViewById(R.id.tradescount);highTxt=view.findViewById(R.id.high);
         lowTxt=view.findViewById(R.id.low);volumeTxt=view.findViewById(R.id.volume);amountTxt=view.findViewById(R.id.amount);
-
+            tradeDetailsTitleTxt=view.findViewById(R.id.title2);
 
         return view;
     }
@@ -65,7 +65,7 @@ public class TradeDetailsFragment extends Fragment {
 //                    generalIndex.setCompany(company);
 
                   //  generalIndexList.add(generalIndex);
-                  symbolTxt.setText(symbol);tradesCountTxt.setText(tradesCount);highTxt.setText((high));lowTxt.setText(low);volumeTxt.setText(volume);amountTxt.setText(amount);
+                    tradeDetailsTitleTxt.setText(name);symbolTxt.setText(symbol);tradesCountTxt.setText(tradesCount);highTxt.setText((high));lowTxt.setText(low);volumeTxt.setText(volume);amountTxt.setText(amount);
 
                 } catch (JSONException e) {
                     System.err.println(e.getMessage());

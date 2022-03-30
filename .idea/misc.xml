@@ -3,20 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main2.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/app_bar_main2.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/content_main2.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/frag3.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
         <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/generalindex.xml" value="0.1" />
         <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/list_adapter.xml" value="0.1" />
         <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/marketwatch.xml" value="0.1" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/nav_header.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/nav_header_main2.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/layout/tradedetails.xml" value="0.1" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/menu/main2.xml" value="0.2125" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/menu/navigation_menu.xml" value="0.22" />
+        <entry key="..\:/Users/Shrooq/AndroidStudioProjects/MyApplication/app/src/main/res/menu/navigationmenu.xml" value="0.25729166666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.5" />
+        <option name="scale" value="0.12" />
       </ProjectState>
     </option>
   </component>

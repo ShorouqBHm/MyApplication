@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+
     <string name="name">Name</string>
     <string name="trade">Trade :</string>
     <string name="amount">Amount :</string>
@@ -14,6 +14,15 @@
     <string name="low">Low:</string>
     <string name="Volume">Volume:</string>
     <string name="Amount">Amount:</string>
-
+    <string name="app_name">Ticker Chart</string>
+    <!--to toggle the open close button
+        of the navigation drawer-->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="company">Company</string>
+    <string name="highprice">HighPrice</string>
+    <string name="bidprice">BidPrice</string>
+    <string name="lastprice">LastPrice</string>
+    <string name="askprice">AskPrice</string>
 
 </resources>
