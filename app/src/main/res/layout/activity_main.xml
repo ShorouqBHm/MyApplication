@@ -12,12 +12,22 @@
     tools:ignore="HardcodedText"
     android:background="@color/White">
 
-    <Switch
-        android:id="@+id/switch1"
+    <FrameLayout
+        android:id="@+id/general_index_container"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:text="Switch"
-        android:layout_marginTop="500dp"/>
+        android:layout_height="wrap_content"
+        />
+    <FrameLayout
+        android:id="@+id/MarketWatch_contanier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/TradeDetails_contanier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -26,5 +36,13 @@
         app:menu="@menu/navigation_menu"
         android:id="@+id/navigation_drawer"
    />
+
+
+<!--    <Switch-->
+<!--        android:id="@+id/switchh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:text="Switch"-->
+<!--        android:layout_marginTop="500dp"/>-->
 </androidx.drawerlayout.widget.DrawerLayout>
 

@@ -46,23 +46,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        aswitch = findViewById(R.id.switch1);
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            aswitch.setChecked(true);
-        }
-
-        aswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    reset();
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    reset();
-                }
-            }
-        });
+//        aswitch = findViewById(R.id.switchh);
+//        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+//            aswitch.setChecked(true);
+//        }
+//
+//        aswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+//                if (isChecked) {
+//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+//                    reset();
+//                } else {
+//                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//                    reset();
+//                }
+//            }
+//        });
 
         drawerLayout = findViewById(R.id.my_drawer_layout);
         navigationView = findViewById(R.id.navigation_drawer);
@@ -75,16 +75,33 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.nav_Language:
                     Toast.makeText(this, "Android Menu is Clicked", Toast.LENGTH_LONG).show();
                     break;
-                case R.id.nav_theme:
+                case R.id.nav_theme: {
+                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                        item.setChecked(true);
+                    }
+//                    item.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                        @Override
+//                        public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+//                            if (isChecked) {
+//                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+//                                reset();
+//                            } else {
+//                                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//                                reset();
+//                            }
+//                        }
+//                    });
+
                     Toast.makeText(this, "Android Menu is Clicked", Toast.LENGTH_LONG).show();
                     break;
+                }
             }
 
             drawerLayout.closeDrawers();
 
             return true;
         });
-        
+
 //         drawer layout instance to toggle the menu icon to open
 //         drawer and back button to close drawer
 
@@ -105,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
 //              // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getSupportFragmentManager().beginTransaction().add(R.id.my_drawer_layout, new GeneralIndexFragment()).addToBackStack("asd").commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.my_drawer_layout, new MarketWatchFragment()).addToBackStack("asd").commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.my_drawer_layout, new TradeDetailsFragment()).addToBackStack("asd").commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.general_index_container, new GeneralIndexFragment()).addToBackStack("asd").commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.MarketWatch_contanier, new MarketWatchFragment()).addToBackStack("asd").commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.TradeDetails_contanier, new TradeDetailsFragment()).addToBackStack("asd").commit();
 
     }
 //                Toast.makeText(getApplication(),"Shorouq",Toast.LENGTH_SHORT).show();
