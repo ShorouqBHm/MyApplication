@@ -18,9 +18,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:background="?attr/Black"
             android:orientation="horizontal"
+
+
             >
 
             <TextView
@@ -39,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_vertical"
                 android:layout_marginStart="43dp"
-                android:text="@string/askprice"
+                android:text="@string/ask_price"
                 android:textAlignment="center"
                 android:textColor="?attr/White"
                 android:textSize="14sp" />
@@ -49,7 +51,7 @@
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_vertical"
-                android:text="@string/lastprice"
+                android:text="@string/last_price"
                 android:textAlignment="center"
                 android:textColor="?attr/White"
                 android:textSize="14sp" />
@@ -59,7 +61,7 @@
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_vertical"
-                android:text="@string/bidprice"
+                android:text="@string/bid_price"
                 android:textAlignment="center"
                 android:textColor="?attr/White"
                 android:textSize="14sp" />
@@ -69,7 +71,7 @@
                 android:layout_width="65dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_vertical"
-                android:text="@string/highprice"
+                android:text="@string/high_price"
                 android:textAlignment="center"
                 android:textColor="?attr/White"
                 android:textSize="14sp" />

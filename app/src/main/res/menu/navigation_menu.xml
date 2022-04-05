@@ -8,14 +8,15 @@
 
     <item
         android:id="@+id/nav_Language"
-        android:title="Change to"
+        android:title="@string/english"
         android:icon="@drawable/ic_baseline_language_24"
+
         
               />
 
     <item
         android:id="@+id/nav_theme"
-        android:title="Change to"
+        android:title="@string/light"
         android:icon="@drawable/ic_baseline_color_lens_24"/>
 
   </menu>

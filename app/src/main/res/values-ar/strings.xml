@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">الاسم</string>
+    <string name="trade">تداول:</string>
+    <string name="amount">الكمية:</string>
+    <string name="volume">الحجم :</string>
+    <string name="companies">الشركات</string>
+    <string name="winning">رابحة</string>
+    <string name="fixed">ثابتة</string>
+    <string name="losing">خاسرة</string>
+    <string name="symbol">الرمز:</string>
+    <string name="trades_count">عدد الصفقات:</string>
+    <string name="high">مرتفع:</string>
+    <string name="low">منخفض:</string>
+    <string name="app_name">تكرتشارت</string>
+    <!--to toggle the open close button
+        of the navigation drawer-->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    /////
+
+    <string name="english" translatable="false">الانجليزية-العربية</string>
+    <string name="light">ابيض-أسود</string>
+
+    <string name="company">الشركة</string>
+    <string name="high_price">سعر اعلى</string>
+    <string name="bid_price">الطلب</string>
+    <string name="last_price">السعر الاخر</string>
+    <string name="ask_price">سعر العرض</string>
+
+</resources>

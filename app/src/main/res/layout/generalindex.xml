@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/f1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
- >
+    android:layout_height="match_parent">
 
 
     <androidx.cardview.widget.CardView
@@ -38,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
                 android:text="@string/trade"
                 android:textColor="?attr/White"
                 android:textSize="17sp"
@@ -48,8 +48,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
-                android:layout_marginStart="55dp"
                 android:layout_marginTop="5dp"
+
+                android:layout_toEndOf="@+id/txtview1"
                 android:textColor="?attr/White"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -62,6 +63,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
                 android:text="@string/amount"
                 android:textColor="?attr/White"
                 android:textSize="17sp"
@@ -72,9 +74,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
-                android:layout_toRightOf="@+id/txtview3"
+                android:layout_toEndOf="@+id/txtview3"
                 android:textColor="?attr/White"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -85,6 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/trade"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
                 android:text="@string/volume"
                 android:textColor="?attr/White"
                 android:textSize="17sp"
@@ -95,8 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/trade"
-                android:layout_marginStart="70dp"
                 android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/txtview5"
                 android:textColor="?attr/White"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -117,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
                 android:text="@string/companies"
                 android:textColor="?attr/White"
                 android:textSize="17sp"
@@ -127,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="160dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/winning"
                 android:textColor="?attr/White"
                 android:textSize="17sp" />
@@ -136,8 +139,8 @@
                 android:id="@+id/txtview9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/txtview8"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/txtview8"
                 android:text="@string/fixed"
                 android:textColor="?attr/White"
                 android:textSize="17sp" />
@@ -146,8 +149,8 @@
                 android:id="@+id/txtview10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_toRightOf="@+id/txtview9"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/txtview9"
                 android:text="@string/losing"
                 android:textColor="?attr/White"
                 android:textSize="17sp" />
@@ -156,8 +159,9 @@
                 android:id="@+id/winning"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/txtview8"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
+
                 android:textColor="@color/green"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -166,9 +170,9 @@
                 android:id="@+id/fixed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="25dp"
-                android:layout_toRightOf="@+id/winning"
+                android:layout_below="@+id/txtview9"
+                android:layout_marginStart="35dp"
+                android:layout_toEndOf="@+id/winning"
                 android:textColor="?attr/White"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -177,12 +181,11 @@
                 android:id="@+id/losing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="37dp"
-                android:layout_marginTop="25dp"
-                android:layout_toRightOf="@+id/fixed"
+                android:layout_below="@+id/txtview10"
+                android:layout_marginStart="45dp"
+                android:layout_toEndOf="@+id/fixed"
                 android:textColor="@color/Red"
                 android:textSize="19sp"
-
                 android:textStyle="bold" />
 
         </RelativeLayout>

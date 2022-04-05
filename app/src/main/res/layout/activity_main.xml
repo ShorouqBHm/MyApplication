@@ -25,7 +25,8 @@
     <FrameLayout
         android:id="@+id/TradeDetails_contanier"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
 
 
 
@@ -38,11 +39,6 @@
    />
 
 
-<!--    <Switch-->
-<!--        android:id="@+id/switchh"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="1dp"-->
-<!--        android:text="Switch"-->
-<!--        android:layout_marginTop="500dp"/>-->
+
 </androidx.drawerlayout.widget.DrawerLayout>
 

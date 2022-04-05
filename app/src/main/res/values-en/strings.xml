@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="name">Name</string>
     <string name="trade">Trade :</string>
     <string name="amount">Amount :</string>
@@ -13,17 +13,16 @@
     <string name="high">High:</string>
     <string name="low">Low:</string>
     <string name="app_name">Ticker Chart</string>
-    <string name="english">English-Arabic</string>
-    <string name="light">Light-Dark</string>
     <!--to toggle the open close button
         of the navigation drawer-->
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="english" >English-Arabic</string>
+    <string name="light">Light-Dark</string>
     /////
     <string name="company">Company</string>
     <string name="high_price">HighPrice</string>
     <string name="bid_price">BidPrice</string>
     <string name="last_price">LastPrice</string>
     <string name="ask_price">AskPrice</string>
-
 </resources>
