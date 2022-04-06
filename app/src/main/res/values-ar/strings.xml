@@ -19,7 +19,7 @@
     <string name="nav_close">Close</string>
     /////
 
-    <string name="english" translatable="false">الانجليزية-العربية</string>
+    <string name="english">الانجليزية-العربية</string>
     <string name="light">ابيض-أسود</string>
 
     <string name="company">الشركة</string>

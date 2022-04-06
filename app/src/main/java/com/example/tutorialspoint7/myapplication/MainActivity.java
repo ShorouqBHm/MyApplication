@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 
@@ -46,59 +46,47 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        getString(R.string.app_name);
+      //  getString(R.string.app_name);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
       //  getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>"+ getString(R.string.app_name)+" </font>"));
 
         drawerLayout = findViewById(R.id.my_drawer_layout);
         navigationView = findViewById(R.id.navigation_drawer);
-
-
-       // setLocale(this, "ar");
-      //  setLocale(this, "en");
-
         navigationView.setNavigationItemSelectedListener(item -> {
-
             switch (item.getItemId()) {
 
 
-                case R.id.nav_Language:
-                {
+                case R.id.nav_Language: {
+
+     System.out.println(Locale.getDefault().getLanguage()+"DDDD");
 
 
-                    if(Locale.getDefault().getLanguage().equals("ar"))
+                if(Locale.getDefault().getLanguage().equals("en"))
+
+                {  setLocale(this, "ar");
+                        reset();}
+
+                else
                     {
-                        // Locale.setDefault();
                         setLocale(this, "en");
                         reset();
-
                     }
-                    else if (Locale.getDefault().getLanguage().equals("en")) {
 
-                      setLocale(this, "ar");
-                      reset();
-
-                     }
                     break;
-
                 }
 
 
                 case R.id.nav_theme: {
                     if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-
                         reset();
                     } else {
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                         reset();
-
                     }
                     drawerLayout.closeDrawers();
                     break;
@@ -107,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             return true;
-        });
+          });
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
@@ -133,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
     private void reset() {
 
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-
-        startActivity(intent); finish();
+        startActivity(intent);
+        finish();
 
     }
 
@@ -146,5 +134,4 @@ public class MainActivity extends AppCompatActivity {
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
-
-}
+    }
