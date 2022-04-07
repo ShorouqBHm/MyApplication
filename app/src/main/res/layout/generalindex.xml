@@ -27,7 +27,7 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:text="@string/trade"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
                 android:layout_marginTop="5dp"
 
                 android:layout_toEndOf="@+id/txtview1"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -65,7 +65,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="5dp"
                 android:text="@string/amount"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -76,7 +76,7 @@
                 android:layout_below="@+id/title"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@+id/txtview3"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
                 android:text="@string/volume"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
                 android:layout_below="@+id/trade"
                 android:layout_marginTop="10dp"
                 android:layout_toEndOf="@+id/txtview5"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -121,7 +121,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="50dp"
                 android:text="@string/companies"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -132,7 +132,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginEnd="10dp"
                 android:text="@string/winning"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp" />
 
             <TextView
@@ -142,7 +142,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_toEndOf="@+id/txtview8"
                 android:text="@string/fixed"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp" />
 
             <TextView
@@ -152,7 +152,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_toEndOf="@+id/txtview9"
                 android:text="@string/losing"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="17sp" />
 
             <TextView
@@ -173,7 +173,7 @@
                 android:layout_below="@+id/txtview9"
                 android:layout_marginStart="35dp"
                 android:layout_toEndOf="@+id/winning"
-                android:textColor="?attr/TextColorNightTheme"
+                android:textColor="?attr/textColor"
                 android:textSize="19sp"
                 android:textStyle="bold" />
 

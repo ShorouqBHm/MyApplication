@@ -4,8 +4,8 @@
     <declare-styleable name="dark">
         
         <attr name="backGround" format="color"/>
-        <attr name="TextColorNightTheme" format="color"/>
-        <attr name="HeaderColor" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="headerColor" format="color"/>
 
     </declare-styleable>
     

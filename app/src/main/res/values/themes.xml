@@ -8,8 +8,8 @@
         <item name="colorOnPrimary">@color/white</item>
 
         <item name="backGround">#1A1A1A</item>
-        <item name="TextColorNightTheme">#FFFFFF</item>
-        <item name="HeaderColor">#000000</item>
+        <item name="textColor">#FFFFFF</item>
+        <item name="headerColor">#000000</item>
 
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
@@ -24,8 +24,8 @@
         <item name="colorOnPrimary">#FFFFFF</item>
 
         <item name="backGround">#FFFFFF</item>
-        <item name="TextColorNightTheme">#000000</item>
-        <item name="HeaderColor">#FFFFFF</item>
+        <item name="textColor">#000000</item>
+        <item name="headerColor">#FFFFFF</item>
         <item name="android:navigationBarColor">@color/white</item>
 
         <!-- Status bar color. -->
