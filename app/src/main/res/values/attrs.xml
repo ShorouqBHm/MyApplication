@@ -3,10 +3,9 @@
     
     <declare-styleable name="dark">
         
-        <attr name="boldgray" format="color"/>
-        <attr name="yellow" format="color"/>
-        <attr name="White" format="color"/>
-        <attr name="Black" format="color"/>
+        <attr name="backGround" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="headerColor" format="color"/>
 
     </declare-styleable>
     
