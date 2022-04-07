@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder>{
 
     private List<Trade> tradeList;
@@ -21,7 +24,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder>{
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_adapter,parent,false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).
+                inflate(R.layout.list_adapter,parent,false));
     }
 
     @Override
@@ -48,16 +52,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder>{
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView txtview1,txtview2,txtview3,txtview4,txtview5;
+        @BindView(R.id.textView1) TextView txtview1;
+        @BindView(R.id.textView2) TextView txtview2;
+        @BindView(R.id.textView3) TextView txtview3;
+        @BindView(R.id.textView4) TextView txtview4;
+        @BindView(R.id.textView5) TextView txtview5;
 
         public MyViewHolder(@NonNull View itemView){
 
             super(itemView);
-            txtview1=itemView.findViewById(R.id.textView1);
-            txtview2=itemView.findViewById(R.id.textView2);
-            txtview3=itemView.findViewById(R.id.textView3);
-            txtview4=itemView.findViewById(R.id.textView4);
-            txtview5=itemView.findViewById(R.id.textView5);
+
+
+            ButterKnife.bind(this, itemView);
 
         }
 

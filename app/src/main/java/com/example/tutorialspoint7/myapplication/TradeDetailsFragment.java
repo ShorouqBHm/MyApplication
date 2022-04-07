@@ -18,9 +18,19 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class TradeDetailsFragment extends Fragment {
 
-    TextView tradeDetailsTitleTxt,symbolTxt,tradesCountTxt,highTxt,lowTxt,volumeTxt,amountTxt;
+    @BindView(R.id.title2) TextView tradeDetailsTitleTxt;
+    @BindView(R.id.symbol) TextView symbolTxt;
+    @BindView(R.id.tradescount) TextView tradesCountTxt;
+    @BindView(R.id.high) TextView highTxt;
+    @BindView(R.id.low) TextView lowTxt;
+    @BindView(R.id.volume) TextView volumeTxt;
+    @BindView(R.id.amount) TextView amountTxt;
+
     @Override
     public void onStart() {
         super.onStart();
@@ -31,10 +41,7 @@ public class TradeDetailsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tradedetails, container, false);
-        symbolTxt=view.findViewById(R.id.symbol);tradesCountTxt=view.findViewById(R.id.tradescount);highTxt=view.findViewById(R.id.high);
-        lowTxt=view.findViewById(R.id.low);volumeTxt=view.findViewById(R.id.volume);amountTxt=view.findViewById(R.id.amount);
-            tradeDetailsTitleTxt=view.findViewById(R.id.title2);
-
+        ButterKnife.bind(this, view);
         return view;
     }
 

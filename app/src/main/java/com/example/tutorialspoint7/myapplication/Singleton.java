@@ -16,9 +16,6 @@ public class Singleton extends AppCompatActivity {
     private Singleton() {
 
     }
-    public void init(Context context) {
-
-    }
 
     public static synchronized Singleton getInstance(Context context) {
         mQueue = Volley.newRequestQueue(context);

@@ -25,11 +25,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class MarketWatchFragment extends Fragment {
 
+    @BindView(R.id.rec) RecyclerView recyclerView;
     private List<Trade>tradeList=new ArrayList<>();
-    private RecyclerView recyclerView;
     private ListAdapter listAdapter;
 
 
@@ -48,8 +51,8 @@ public class MarketWatchFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.marketwatch, container, false);
-        recyclerView = view.findViewById(R.id.rec);
+        View view = inflater.inflate(R.layout.marketwatch, container, false);
+        ButterKnife.bind(this, view);
         LinearLayoutManager horizontalLayoutManager
                 = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(horizontalLayoutManager);

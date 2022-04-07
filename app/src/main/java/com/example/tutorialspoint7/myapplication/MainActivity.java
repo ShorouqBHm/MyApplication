@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 
@@ -18,18 +18,21 @@ import android.os.Bundle;
 
 import android.text.Html;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import com.google.android.material.navigation.NavigationView;
-
-
 import java.util.Locale;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnTouch;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    public DrawerLayout drawerLayout;
-    private NavigationView navigationView;
+    @BindView(R.id.my_drawer_layout) DrawerLayout drawerLayout;
+    @BindView(R.id.navigation_drawer) NavigationView navigationView;
+
     public ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,43 +44,35 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setTheme(R.style.Theme_MyApplicationLight);
             getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>" + getString(R.string.app_name) + " </font>"));
-
         }
-
-
-
       //  getString(R.string.app_name);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+           ButterKnife.bind(this);
       //  getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>"+ getString(R.string.app_name)+" </font>"));
 
-        drawerLayout = findViewById(R.id.my_drawer_layout);
-        navigationView = findViewById(R.id.navigation_drawer);
         navigationView.setNavigationItemSelectedListener(item -> {
-            switch (item.getItemId()) {
 
+     switch (item.getItemId()) {
+//                case R.id.nav_Language: {
+//
+//             if(Locale.getDefault().getLanguage().equals("en"))
+//
+//             {
+//                 setLocale(this,"ar");
+//                    reset();
+//             }
+//                else
+//                    {
+//
+//                        setLocale(this,"en");
+//                        reset();
+//                    }
+////
+//                  break;
+//         }
 
-                case R.id.nav_Language: {
-
-     System.out.println(Locale.getDefault().getLanguage()+"DDDD");
-
-
-                if(Locale.getDefault().getLanguage().equals("en"))
-
-                {  setLocale(this, "ar");
-                        reset();}
-
-                else
-                    {
-                        setLocale(this, "en");
-                        reset();
-                    }
-
-                    break;
-                }
 
 
                 case R.id.nav_theme: {
@@ -108,7 +103,10 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.TradeDetails_contanier, new TradeDetailsFragment()).addToBackStack("asd").commit();
 
     }
-
+    @OnTouch(R.id.navigation_drawer)
+    void buttonClick(){
+        Toast.makeText(this,"This is aToast msg",Toast.LENGTH_LONG).show();
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 

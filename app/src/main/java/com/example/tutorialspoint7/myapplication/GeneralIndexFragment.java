@@ -23,10 +23,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 public class GeneralIndexFragment extends Fragment {
 
     private List<GeneralIndex> generalIndexList=new ArrayList<>();
-     TextView tradeTitleTxt,tradeTxt,amountTxt,volumeTxt,winning_txt,fixedTxt,losingTxt;
+
+    @BindView(R.id.title) TextView tradeTitleTxt;
+    @BindView(R.id.trade)  TextView tradeTxt;
+    @BindView(R.id.amount) TextView amountTxt;
+    @BindView(R.id.volume)  TextView  volumeTxt;
+    @BindView(R.id.winning) TextView winning_txt;
+    @BindView(R.id.fixed)  TextView fixedTxt;
+    @BindView(R.id.losing)  TextView losingTxt;
+    private Unbinder unbinder;
+
     @Override
     public void onStart() {
         super.onStart();
@@ -37,11 +50,8 @@ public class GeneralIndexFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.generalindex, container, false);
-        tradeTxt=view.findViewById(R.id.trade);amountTxt=view.findViewById(R.id.amount);volumeTxt=view.findViewById(R.id.volume);
-        winning_txt=view.findViewById(R.id.winning);fixedTxt=view.findViewById(R.id.fixed);losingTxt=view.findViewById(R.id.losing);
-       tradeTitleTxt=view.findViewById(R.id.title);
-
-               return view;
+        unbinder=  ButterKnife.bind(this, view);//findviewbyId
+        return view;
     }
 
 
@@ -94,6 +104,10 @@ public class GeneralIndexFragment extends Fragment {
 
         Singleton.getInstance(getContext()).addRequest(request);
     }
+    @Override public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
 
+    }
 
 }
