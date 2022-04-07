@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:layout_marginTop="200dp"
+   android:layout_marginTop="180dp"
     android:orientation="horizontal"
   >
 
@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:background="?attr/Black"
+        android:background="?attr/HeaderColor"
         android:orientation="horizontal"
         android:gravity="center"
         android:id="@+id/header"
@@ -25,7 +25,7 @@
             android:layout_gravity="center|center_vertical"
             android:layout_marginStart="5dp"
             android:text="@string/company"
-            android:textColor="?attr/White"
+            android:textColor="?attr/TextColorNightTheme"
             android:textSize="16sp"/>
 
         <TextView
@@ -36,7 +36,7 @@
             android:layout_marginStart="43dp"
             android:text="@string/ask_price"
             android:textAlignment="center"
-            android:textColor="?attr/White"
+            android:textColor="?attr/TextColorNightTheme"
             android:textSize="14sp" />
 
         <TextView
@@ -46,7 +46,7 @@
             android:layout_gravity="center|center_vertical"
             android:text="@string/last_price"
             android:textAlignment="center"
-            android:textColor="?attr/White"
+            android:textColor="?attr/TextColorNightTheme"
             android:textSize="14sp" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:layout_gravity="center|center_vertical"
             android:text="@string/bid_price"
             android:textAlignment="center"
-            android:textColor="?attr/White"
+            android:textColor="?attr/TextColorNightTheme"
             android:textSize="14sp" />
 
         <TextView
@@ -66,7 +66,7 @@
             android:layout_gravity="center|center_vertical"
             android:text="@string/high_price"
             android:textAlignment="center"
-            android:textColor="?attr/White"
+            android:textColor="?attr/TextColorNightTheme"
             android:textSize="14sp" />
 
     </LinearLayout>
