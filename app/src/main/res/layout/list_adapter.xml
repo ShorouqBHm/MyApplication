@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:textAlignment="viewStart"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/TextColorNightTheme"
             android:textStyle="bold" />
 
         <TextView
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:textAlignment="viewStart"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/TextColorNightTheme"
             android:textStyle="bold" />
 
         <TextView
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:textAlignment="viewStart"
-            android:textColor="?attr/textColor"
+            android:textColor="?attr/TextColorNightTheme"
             android:textStyle="bold" />
 
         <TextView
