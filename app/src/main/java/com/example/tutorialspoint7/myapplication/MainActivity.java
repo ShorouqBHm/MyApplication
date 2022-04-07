@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>" + getString(R.string.app_name) + " </font>"));
 
         }
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
       //  getString(R.string.app_name);
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportFragmentManager().beginTransaction().add(R.id.general_index_container, new GeneralIndexFragment()).addToBackStack("asd").commit();
         getSupportFragmentManager().beginTransaction().add(R.id.MarketWatch_contanier, new MarketWatchFragment()).addToBackStack("asd").commit();
