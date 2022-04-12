@@ -83,6 +83,8 @@ public class TradeDetailsFragment extends Fragment {
                     tradeDetails.setAmount(amount);
 
                     viewData(tradeDetails);
+
+
                 } catch (JSONException e) {
                     System.err.println(e.getMessage());
 

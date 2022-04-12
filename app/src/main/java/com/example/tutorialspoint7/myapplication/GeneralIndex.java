@@ -9,6 +9,7 @@ public class GeneralIndex {
     private Company company;
 
     public String getName() {
+
         return title;
     }
 

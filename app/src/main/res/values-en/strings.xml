@@ -13,13 +13,13 @@
     <string name="high">High:</string>
     <string name="low">Low:</string>
     <string name="app_name">Ticker Chart</string>
-    <!--to toggle the open close button
-        of the navigation drawer-->
+
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
-    <string name="english" >English-Arabic</string>
+
+    <string name="english">English-Arabic</string>
     <string name="light">Light-Dark</string>
-    /////
+
     <string name="company">Company</string>
     <string name="high_price">HighPrice</string>
     <string name="bid_price">BidPrice</string>

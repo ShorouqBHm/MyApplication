@@ -2,16 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="45dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:padding="0.7dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:padding="0.7dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:background="?attr/backGround"
         android:gravity="center"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/title"

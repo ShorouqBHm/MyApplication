@@ -13,11 +13,9 @@
     <string name="high">مرتفع:</string>
     <string name="low">منخفض:</string>
     <string name="app_name">تكرتشارت</string>
-    <!--to toggle the open close button
-        of the navigation drawer-->
+
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
-    /////
 
     <string name="english">الانجليزية-العربية</string>
     <string name="light">ابيض-أسود</string>
@@ -27,5 +25,4 @@
     <string name="bid_price">الطلب</string>
     <string name="last_price">السعر الاخر</string>
     <string name="ask_price">سعر العرض</string>
-
 </resources>

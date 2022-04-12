@@ -1,9 +1,11 @@
 package com.example.tutorialspoint7.myapplication;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -12,8 +14,11 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.MenuItem;
+
 import com.google.android.material.navigation.NavigationView;
+
 import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -39,26 +44,18 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>" + getString(R.string.app_name) + " </font>"));
         }
 
-
-        //  getString(R.string.app_name);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        //  getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>"+ getString(R.string.app_name)+" </font>"));
-        // setLocale(this,"ar");
+
         navigationView.setNavigationItemSelectedListener(item -> {
 
 
             switch (item.getItemId()) {
 
-                case R.id.nav_Language: {
-                    // setLocale(this,"en"); reset();
-                    changeLanguage();
-
+                case R.id.nav_Language:
                     break;
-                }
-
 
                 case R.id.nav_theme: {
                     if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
@@ -73,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-
             return true;
         });
 
@@ -84,9 +80,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportFragmentManager().beginTransaction().add(R.id.general_index_container, new GeneralIndexFragment()).addToBackStack("asd").commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.MarketWatch_contanier, new MarketWatchFragment()).addToBackStack("asd").commit();
-        getSupportFragmentManager().beginTransaction().add(R.id.TradeDetails_contanier, new TradeDetailsFragment()).addToBackStack("asd").commit();
-
+        getSupportFragmentManager().beginTransaction().add(R.id.marketWatch_contanier, new MarketWatchFragment()).addToBackStack("asd").commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.tradeDetails_contanier, new TradeDetailsFragment()).addToBackStack("asd").commit();
 
     }
 
@@ -119,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     public static void setLocale(Activity activity, String languageCode) {
         Locale locale = new Locale(languageCode);
         Locale.setDefault(locale);
@@ -128,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         config.setLocale(locale);
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
+
     public void setLocale(String lang) {
         Locale myLocale = new Locale(lang);
         Resources res = getResources();

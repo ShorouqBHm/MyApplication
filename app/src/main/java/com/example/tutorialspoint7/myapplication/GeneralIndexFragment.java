@@ -11,8 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONException;
@@ -62,52 +60,43 @@ public class GeneralIndexFragment extends Fragment {
         String url = "https://tickerchart.com/interview/general-index.json";
 
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, response -> {
 
 
-                try {
+            try {
 
-                    GeneralIndex generalIndex = new GeneralIndex();
-                    Company company = new Company();
-                    String name = response.getString("name");
-                    String trades = response.getString("trades");
-                    String volume = response.getString("volume");
-                    String amount = response.getString("amount");
+                GeneralIndex generalIndex = new GeneralIndex();
+                Company company = new Company();
+                String title = response.getString("name");
+                String trades = response.getString("trades");
+                String volume = response.getString("volume");
+                String amount = response.getString("amount");
 
-                    JSONObject companiesObject = response.getJSONObject("companies");
+                JSONObject companiesObject = response.getJSONObject("companies");
 
-                    String winning = companiesObject.getString("winning");
-                    String fixed = companiesObject.getString("fixed");
-                    String losing = companiesObject.getString("losing");
-
-
-                    company.setWinning(winning);
-                    company.setFixed(fixed);
-                    company.setLosing(losing);
-                    generalIndex.setName(name);
-                    generalIndex.setTrades(trades);
-                    generalIndex.setVolume(volume);
-                    generalIndex.setAmount(amount);
-                    generalIndex.setCompany(company);
-
-                    viewData(generalIndex);
+                String winning = companiesObject.getString("winning");
+                String fixed = companiesObject.getString("fixed");
+                String losing = companiesObject.getString("losing");
 
 
-                } catch (JSONException e) {
-                    System.err.println(e.getMessage());
+                company.setWinning(winning);
+                company.setFixed(fixed);
+                company.setLosing(losing);
+                generalIndex.setName(title);
+                generalIndex.setTrades(trades);
+                generalIndex.setVolume(volume);
+                generalIndex.setAmount(amount);
+                generalIndex.setCompany(company);
 
-                }
-            }
 
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                System.err.println(error.getMessage());
+                viewData(generalIndex);
+
+
+            } catch (JSONException e) {
+                System.err.println(e.getMessage());
 
             }
-        });
+        }, error -> System.err.println(error.getMessage()));
 
         VolleySingleton.getInstance(getContext()).addRequest(request);
     }

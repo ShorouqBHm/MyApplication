@@ -1,8 +1,5 @@
 package com.example.tutorialspoint7.myapplication;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Trade {
 
 
@@ -11,7 +8,6 @@ public class Trade {
     private double lastP;
     private double bidP;
     private double highP;
-
 
     public String getName() {
         return name;
