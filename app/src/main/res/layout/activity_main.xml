@@ -11,7 +11,6 @@
     tools:context=".MainActivity"
     tools:ignore="HardcodedText"
     android:background="@color/White">
-
     <FrameLayout
         android:id="@+id/general_index_container"
         android:layout_width="match_parent"

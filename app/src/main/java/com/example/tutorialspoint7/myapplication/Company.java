@@ -1,10 +1,9 @@
 package com.example.tutorialspoint7.myapplication;
 
 public class Company {
-
     private String winning;
-    private  String fixed;
-    private  String losing;
+    private String fixed;
+    private String losing;
 
     public String getWinning() {
         return winning;

@@ -7,11 +7,10 @@ public class Trade {
 
 
     private String name;
-    private  double askP;
-   private double lastP;
-   private  double bidP;
+    private double askP;
+    private double lastP;
+    private double bidP;
     private double highP;
-
 
 
     public String getName() {

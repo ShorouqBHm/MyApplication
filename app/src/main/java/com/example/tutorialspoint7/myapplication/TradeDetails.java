@@ -2,7 +2,13 @@ package com.example.tutorialspoint7.myapplication;
 
 public class TradeDetails {
 
-    String name,symbol,tradesCount,high,low,volume,amount;
+    String name;
+    String symbol;
+    String tradesCount;
+    String high;
+    String low;
+    String volume;
+    String amount;
 
     public String getName() {
         return name;

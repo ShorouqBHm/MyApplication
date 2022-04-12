@@ -2,18 +2,18 @@ package com.example.tutorialspoint7.myapplication;
 
 public class GeneralIndex {
 
-    private String name;
-    private  String trades;
+    private String title;
+    private String trades;
     private String volume;
-    private  String amount;
+    private String amount;
     private Company company;
 
     public String getName() {
-        return name;
+        return title;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.title = name;
     }
 
     public String getTrades() {

@@ -31,9 +31,9 @@ import butterknife.ButterKnife;
 
 public class MarketWatchFragment extends Fragment {
 
-    @BindView(R.id.rec) RecyclerView recyclerView;
+    @BindView(R.id.rec) RecyclerView tradeRecyclerView;
     private List<Trade>tradeList=new ArrayList<>();
-    private ListAdapter listAdapter;
+    private TradeListAdapter tradeListAdapter;
 
 
 
@@ -55,9 +55,9 @@ public class MarketWatchFragment extends Fragment {
         ButterKnife.bind(this, view);
         LinearLayoutManager horizontalLayoutManager
                 = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(horizontalLayoutManager);
-        listAdapter = new ListAdapter(tradeList);
-        recyclerView.setAdapter(listAdapter);
+        tradeRecyclerView.setLayoutManager(horizontalLayoutManager);
+        tradeListAdapter = new TradeListAdapter(tradeList);
+        tradeRecyclerView.setAdapter(tradeListAdapter);
         return view;
 
     }
@@ -85,7 +85,7 @@ public class MarketWatchFragment extends Fragment {
                         tradeList.add(trade);
 
                     }
-                    listAdapter.setData(tradeList);
+                   tradeListAdapter.setData(tradeList);
                 } catch (JSONException e) {
                     System.err.println(e.getMessage());
                 }
@@ -97,7 +97,7 @@ public class MarketWatchFragment extends Fragment {
             }
         });
 
-        Singleton.getInstance(getContext()).addRequest(request);
+        VolleySingleton.getInstance(getContext()).addRequest(request);
     }
 
 

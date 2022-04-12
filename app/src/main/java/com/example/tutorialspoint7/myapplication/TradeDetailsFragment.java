@@ -23,13 +23,20 @@ import butterknife.ButterKnife;
 
 public class TradeDetailsFragment extends Fragment {
 
-    @BindView(R.id.title2) TextView tradeDetailsTitleTxt;
-    @BindView(R.id.symbol) TextView symbolTxt;
-    @BindView(R.id.tradescount) TextView tradesCountTxt;
-    @BindView(R.id.high) TextView highTxt;
-    @BindView(R.id.low) TextView lowTxt;
-    @BindView(R.id.volume) TextView volumeTxt;
-    @BindView(R.id.amount) TextView amountTxt;
+    @BindView(R.id.title)
+    TextView tradeDetailsTitleTxt;
+    @BindView(R.id.symbol)
+    TextView symbolTxt;
+    @BindView(R.id.tradescount)
+    TextView tradesCountTxt;
+    @BindView(R.id.high)
+    TextView highTxt;
+    @BindView(R.id.low)
+    TextView lowTxt;
+    @BindView(R.id.volume)
+    TextView volumeTxt;
+    @BindView(R.id.amount)
+    TextView amountTxt;
 
     @Override
     public void onStart() {
@@ -37,6 +44,7 @@ public class TradeDetailsFragment extends Fragment {
         jsonParse();
 
     }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,33 +55,34 @@ public class TradeDetailsFragment extends Fragment {
 
     public void jsonParse() {
 
-        String url="https://tickerchart.com/interview/company-details.json";
+        String url = "https://tickerchart.com/interview/company-details.json";
 
 
-        JsonObjectRequest request=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>()  {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
 
 
                 try {
 
-                    GeneralIndex generalIndex = new GeneralIndex();
-                    Company company=new Company();
-                    String name=response.getString("company-name");
-                    String symbol= response.getString("symbol");
-                    String tradesCount=response.getString("trades-count");
-                    String high=response.getString("high");
-                    String low=response.getString("low");
-                    String volume=response.getString("volume");
-                    String amount=response.getString("amount");
+                    TradeDetails tradeDetails = new TradeDetails();
+                    String name = response.getString("company-name");
+                    String symbol = response.getString("symbol");
+                    String tradesCount = response.getString("trades-count");
+                    String high = response.getString("high");
+                    String low = response.getString("low");
+                    String volume = response.getString("volume");
+                    String amount = response.getString("amount");
 
+                    tradeDetails.setName(name);
+                    tradeDetails.setSymbol(symbol);
+                    tradeDetails.setTradesCount(tradesCount);
+                    tradeDetails.setHigh(high);
+                    tradeDetails.setLow(low);
+                    tradeDetails.setVolume(volume);
+                    tradeDetails.setAmount(amount);
 
-//                    generalIndex.setName(name);generalIndex.setTrades(trades);generalIndex.setVolume(volume);generalIndex.setAmount(amount);
-//                    generalIndex.setCompany(company);
-
-                  //  generalIndexList.add(generalIndex);
-                    tradeDetailsTitleTxt.setText(name);symbolTxt.setText(symbol);tradesCountTxt.setText(tradesCount);highTxt.setText((high));lowTxt.setText(low);volumeTxt.setText(volume);amountTxt.setText(amount);
-
+                    viewData(tradeDetails);
                 } catch (JSONException e) {
                     System.err.println(e.getMessage());
 
@@ -88,7 +97,16 @@ public class TradeDetailsFragment extends Fragment {
             }
         });
 
-        Singleton.getInstance(getContext()).addRequest(request);
+        VolleySingleton.getInstance(getContext()).addRequest(request);
     }
 
+    private void viewData(TradeDetails tradeDetails) {
+        tradeDetailsTitleTxt.setText(tradeDetails.getName());
+        symbolTxt.setText(tradeDetails.getSymbol());
+        tradesCountTxt.setText(tradeDetails.getTradesCount());
+        highTxt.setText((tradeDetails.getHigh()));
+        lowTxt.setText(tradeDetails.getLow());
+        volumeTxt.setText(tradeDetails.getVolume());
+        amountTxt.setText(tradeDetails.getAmount());
+    }
 }
