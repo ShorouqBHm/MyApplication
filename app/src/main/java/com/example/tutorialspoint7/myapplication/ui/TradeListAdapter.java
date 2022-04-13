@@ -1,4 +1,4 @@
-package com.example.tutorialspoint7.myapplication;
+package com.example.tutorialspoint7.myapplication.ui;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.tutorialspoint7.myapplication.R;
+import com.example.tutorialspoint7.myapplication.domain.Trade;
 
 import java.util.List;
 

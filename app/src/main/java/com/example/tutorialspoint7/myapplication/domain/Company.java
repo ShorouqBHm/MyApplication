@@ -1,4 +1,4 @@
-package com.example.tutorialspoint7.myapplication;
+package com.example.tutorialspoint7.myapplication.domain;
 
 public class Company {
     private String winning;

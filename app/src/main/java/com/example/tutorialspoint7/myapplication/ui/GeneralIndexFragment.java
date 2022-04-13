@@ -1,4 +1,4 @@
-package com.example.tutorialspoint7.myapplication;
+package com.example.tutorialspoint7.myapplication.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +12,10 @@ import androidx.fragment.app.Fragment;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.tutorialspoint7.myapplication.R;
+import com.example.tutorialspoint7.myapplication.network.VolleySingleton;
+import com.example.tutorialspoint7.myapplication.domain.Company;
+import com.example.tutorialspoint7.myapplication.domain.GeneralIndex;
 
 import org.json.JSONException;
 import org.json.JSONObject;

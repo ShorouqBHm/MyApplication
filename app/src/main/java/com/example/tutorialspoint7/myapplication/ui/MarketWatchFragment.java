@@ -1,4 +1,4 @@
-package com.example.tutorialspoint7.myapplication;
+package com.example.tutorialspoint7.myapplication.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.tutorialspoint7.myapplication.R;
+import com.example.tutorialspoint7.myapplication.ui.TradeListAdapter;
+import com.example.tutorialspoint7.myapplication.network.VolleySingleton;
+import com.example.tutorialspoint7.myapplication.domain.Trade;
 
 import org.json.JSONException;
 import org.json.JSONObject;

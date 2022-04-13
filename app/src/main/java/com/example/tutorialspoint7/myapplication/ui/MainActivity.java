@@ -1,4 +1,4 @@
-package com.example.tutorialspoint7.myapplication;
+package com.example.tutorialspoint7.myapplication.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,6 +15,7 @@ import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.MenuItem;
 
+import com.example.tutorialspoint7.myapplication.R;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Locale;
@@ -58,14 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
                 case R.id.nav_theme: {
-                    if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                        reset();
-                    } else {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                        reset();
-                    }
-                    drawerLayout.closeDrawers();
+
+                    Theme();
                     break;
 
                 }
@@ -85,18 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void changeLanguage() {
-        if (Locale.getDefault().getLanguage().equals("en")) {
-
-            setLocale(this, "ar");
-            reset();
-        } else {
-            setLocale(this, "en");
-            reset();
-        }
-    }
-
-    @Override
+      @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
@@ -114,13 +98,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public static void setLocale(Activity activity, String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Resources resources = activity.getResources();
-        Configuration config = resources.getConfiguration();
-        config.setLocale(locale);
-        resources.updateConfiguration(config, resources.getDisplayMetrics());
+    private void Theme(){
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            reset();
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            reset();
+        }
+        drawerLayout.closeDrawers();
+
     }
 
     public void setLocale(String lang) {
